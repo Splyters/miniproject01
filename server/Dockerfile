@@ -103,6 +103,7 @@ COPY --from=builder --chown=nobody:root /app/_build/${MIX_ENV}/rel/miniproject01
 # CMD ["/app/bin/server"]
 USER root
 
+
 RUN chmod +x /app/entrypoint.sh /app/bin/server
 
 CMD ["/app/entrypoint.sh"]
