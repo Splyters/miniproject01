@@ -56,6 +56,9 @@ COPY assets assets
 # compile assets
 RUN mix assets.deploy
 
+RUN mix ecto.drop
+RUN mix ecto.create
+
 # Compile the release
 RUN mix compile
 
