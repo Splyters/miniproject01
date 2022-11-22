@@ -56,9 +56,6 @@ COPY assets assets
 # compile assets
 RUN mix assets.deploy
 
-RUN mix ecto.drop
-RUN mix ecto.create
-
 # Compile the release
 RUN mix compile
 
@@ -107,5 +104,7 @@ COPY --from=builder --chown=nobody:root /app/_build/${MIX_ENV}/rel/miniproject01
 USER root
 
 RUN chmod +x /app/entrypoint.sh /app/bin/server
+
+RUN mix ecto.drop
 
 CMD ["/app/entrypoint.sh"]
