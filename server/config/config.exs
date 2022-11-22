@@ -10,7 +10,7 @@ import Config
 config :miniproject01, ApiProject.Repo,
   password: "password",
   hostname: "db",
-  database: "miniproject01_dev"
+  database: "miniproject01_db"
 
 config :miniproject01,
   namespace: ApiProject,
