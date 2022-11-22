@@ -7,18 +7,13 @@
 # General application configuration
 import Config
 
-config :miniproject01, ApiProject.Repo,
-  password: "postgres",
-  hostname: "db",
-  database: "miniproject01"
-
 config :miniproject01,
   namespace: ApiProject,
   ecto_repos: [ApiProject.Repo]
 
 # Configures the endpoint
 config :miniproject01, ApiProjectWeb.Endpoint,
-  url: [host: "db"],
+  url: [host: "localhost"],
   render_errors: [view: ApiProjectWeb.ErrorView, accepts: ~w(json), layout: false],
   pubsub_server: ApiProject.PubSub,
   live_view: [signing_salt: "HNM+yO4A"]
