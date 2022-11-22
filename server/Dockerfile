@@ -105,6 +105,4 @@ USER root
 
 RUN chmod +x /app/entrypoint.sh /app/bin/server
 
-RUN mix ecto.drop
-
 CMD ["/app/entrypoint.sh"]

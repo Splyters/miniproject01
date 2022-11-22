@@ -8,9 +8,9 @@
 import Config
 
 config :miniproject01, ApiProject.Repo,
-  password: "password",
+  password: "postgres",
   hostname: "db",
-  database: "miniproject01_dev"
+  database: "miniproject01"
 
 config :miniproject01,
   namespace: ApiProject,
